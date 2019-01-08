@@ -10,16 +10,16 @@ import { Book } from '../../Models/book.model';
 })
 export class BookListPage {
 
-  book:Book;
+  books:Book;
   category:string;
 
   constructor(private bookrest: BookRestProvider, public navcon: NavController, public navParams: NavParams) {
   }
 
-  ionViewWillenter(){
+  ionViewWillEnter(){
     this.category=this.navParams.get("category"); 
     this.bookrest.getbookList().subscribe(data=>{
-      this.book=data.filter(book => book.category === this.category);
+      this.books=data.filter(book => book.category === this.category);
     }); 
   }
 
