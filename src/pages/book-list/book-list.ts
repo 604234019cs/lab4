@@ -13,7 +13,7 @@ export class BookListPage {
   book:Book;
   category:string;
 
-  constructor(private bookrest: BookRestProvider, public navParams: NavController, public NavParams: NavParams) {
+  constructor(private bookrest: BookRestProvider, public navcon: NavController, public navParams: NavParams) {
   }
 
   ionViewWillenter(){
